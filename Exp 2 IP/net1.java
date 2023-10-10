@@ -4,7 +4,7 @@ public class net1{
 try{
   InetAddress host= InetAddress.getLocalHost();
   System.out.println("Local Host Ip Address: "+ host.getHostAddress());
-  System.out.println("Local Host Name: "+host.getHostName());
+   System.out.println("Local Host Name: "+host.getHostName());
 }
 catch(Exception e){
 System.out.println(e);
