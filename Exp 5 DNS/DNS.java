@@ -3,8 +3,9 @@ import java.util.Scanner;
 
 public class DNS {
     public static void main(String[] args) {
-        String ipAddress = "";
+
         try {
+            String ipAddress = "";
             ProcessBuilder ipconfigBuilder = new ProcessBuilder("ipconfig", "/all");
             Process ipconfigProcess = ipconfigBuilder.start();
             Scanner reader = new Scanner(ipconfigProcess.getInputStream());
@@ -19,8 +20,8 @@ public class DNS {
                 }
             }
 
-            ProcessBuilder nslookupBuilder = new ProcessBuilder("nslookup", ipAddress);
-            Process nslookupProcess = nslookupBuilder.start();
+            ProcessBuilder lookupBuilder = new ProcessBuilder("nslookup", ipAddress);
+            Process nslookupProcess = lookupBuilder.start();
             reader = new Scanner(nslookupProcess.getInputStream());
 
             while (reader.hasNextLine()) {

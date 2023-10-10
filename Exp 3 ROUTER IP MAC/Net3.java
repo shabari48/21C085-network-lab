@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class Net3{
+public class Net3 {
 
   public static void main(String[] args) throws Exception {
     try {
@@ -8,8 +8,7 @@ public class Net3{
       builder.redirectErrorStream(true);
       Process p = builder.start();
       BufferedReader r = new BufferedReader(
-        new InputStreamReader(p.getInputStream())
-      );
+          new InputStreamReader(p.getInputStream()));
       String line;
       int index = 0;
       while (true) {
